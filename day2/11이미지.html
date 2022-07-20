@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day2_이미지</title>
+</head>
+<body>
+    <!-- img 이미지 태그 : 인라인 요소. 
+        src 속성값에 이미지 위치 설정(url 주소 또는 로컬 위치 파일)
+        이미지 파일 위치 지정할때 상대경로와 절대경로 모두 가능-->
+        <img src="spiderman.jpg" alt="spiderman">
+        <img src="../images/ironman.jpg" alt="ironman">
+        <!-- 파일위치와 파일명이 정확하지 안흥면 이미지 표시 안됨(엑박) -->
+        <img src="../images/marvel111" alt="marvel1">
+        <hr>
+        <!-- 이미지크기 너비만 설정 (가로 세로 비율 유지) -->
+        <img src="spiderman.jpg" alt="spiderman" style="width: 100px;">
+        <img src="../images/ironman.jpg" alt="ironman" style="width: 100px ;">
+        <a href="http://www.spiderman.com" target="_blank">
+            <img src="spiderman.jpg" alt="spiderman" style="width: 100px"></a>
+        <hr>
+        <!-- 높이 height 까지 설정하면 가로세로 비율은 유지가 안될수도 있습니다 -->
+        <img src="spiderman.jpg" alt="spiderman" style="width:100px;height:100px;">
+        <img src="../images/ironman.jpg" alt="ironman" style="width: 100px ;height: 100px;">
+</body>
+</html>

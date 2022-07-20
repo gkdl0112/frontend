@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day1_하이퍼링크</title>
+</head>
+<body>
+    <!-- a(anchor):하이퍼링크 기능 태그 -->
+    <!-- href 속성 : 이동할 경로(URL 또는 파일명) 를 설정한다. -->
+    <!-- target 속성 : 이동할 웹문서가 보여질 창을 설정한다. _blank는 새로운 창엣거 보여준다. -->
+    구글로 이동하기 : <a href="https://www.google.com">GOOGLE 구글</a><br>
+    네이버로 이동하기 : <a href="https://www.naver.com">NAVER 네이버</a><br>
+    잘못된 주소 데이트 : <a href="www.nar">없는 URL</a><br>
+    같은 경로의 파일로 이동하기 : <a href="0start.html" target="_blank">0start.html</a><br>
+    <!-- 같은 폴더 경로의 파일은 그대로 파일명만 변경된다. -->
+
+    <!-- 파일명을 지정할때 상대경로에 대한 내용 테스트하기 
+        상대경로: 현재를 기준으로 1)같은폴더? 파일명만 작성
+                                2)하위폴더? 하위폴더명/파일명
+                                3) 상위폴더? ../상위폴더명/파일명 
+                                4) 형제(같은레벨)폴더? ../형제폴더명/파일명 -->
+
+    상위폴더 파일로 링크 : <a href="../test0.html" target ="_blank">test0.html</a><br>
+    형제폴더 파일로 링크 : <a href="../sibling/test1.html" target="_blank">test1.html</a><br>
+</body>
+</html>

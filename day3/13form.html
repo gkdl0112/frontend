@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- href 속성값은 http url 또는 로컬 파일명 -->
+    <link rel="stylesheet" href="13member.css">
+</head>
+<body>
+    <!-- 사용자 입력을 처리하는 form 작성 (form, 작성양식)
+        form 태그 내에 입력요소 태그들을 포함시켜서 작성해야한다.
+        작성완료된 입력을 서버로 전달한다.-->
+        
+        <form action="">
+            <table>
+                <!-- label 태그는 연관된 텍스트(for속성) 클릭하면 입력요소(id속성)가 포커스를 갖게 할수 있다. -->
+                <tr>
+                    <td><label for="lblname">이름</label></td>
+                    <!-- 입력요소 태그에는 값을 식별하기 위한 속성name 값이 꼭 필요하다.-->
+                    <td><input type="text" name="name" id="lblname"></td>
+                </tr>
+                <tr>
+                    <td><label for = "lblpass">패스워드</label></td>
+                    <td><input type="password" name="password" id="lblpass"></td>
+                </tr>
+                <tr>
+                    <td>이메일</td>
+                    <td><input type="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td>나이</td>
+                    <td><input type="number" name="age" value="19"></td>
+                </tr>
+                <tr>
+                    <td>지역(주소)</td>
+                    <td>
+                        <!-- 콤보박스 : 입력+선택 -->
+                        <!-- 선택상자 : only 선택 -->
+                        <select name="addr">
+                            <!-- value 값이 실제 서버로 전달된다. -->
+                            <option value="서울">서울</option>
+                            <option value="인천">인천</option>
+                            <option value="대전" selected = "selected">대전</option>
+                            <option value="광주">광주</option>
+                            <option value="부산">부산</option>
+
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>성별</td>
+                    <td>
+                        <!-- 옵션(라디오) 버튼 : 여러 항목 중 하나 선택 -->
+                        <input type="radio" name="gender" value="male" id="lblmale">
+                        <label for="lblmale">남성</label>
+                        <input type="radio" name="gender" value="female">여성
+                        <input type="radio" name="gender" 
+                            checked="checked" value="unknown">모름
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>취미</td>
+                    <td>
+                        <!-- 체크박스 : 다중선택. name 속성은 동일한 값 . 서버는 배열로 처리 -->
+                        <input type="checkbox" name="hobby" value="축구">축구
+                        <input type="checkbox" name="hobby" value="농구">농구
+                        <input type="checkbox" name="hobby" value="달리기">달리기
+                        <input type="checkbox" name="hobby" value="수영">수영
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="버튼">
+                        <!-- submit 이 서버로 입력데이터를 전송(제출) -->
+                        <input type="submit" value="제출">
+                        <input type="reset" value="초기화">
+                        <!-- button은 기본동작이 submt -->
+                        <button>제출2</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <!-- 실행 URL 예시 :
+            http://192.168.35.210:5500/day3/13form.html?name=%EA%B9%80%EB%95%A1%EB%95%A1&password=1234&email=test%40naver.com&age=22 
+        
+            -> ? 뒤에 사용자 입력항목들 & 기호로 연결되어 하나의 문자열(쿼리 스트링:조회문자열)로 추가
+            ->? 뒤에 query string 보일때는 주로 조회(get,검색) 동작, 입력한 값이 url 안보일때 데이터를 저장하는 동작
+            ->입력항목은 name 속성값이 key, 사용자가 입력한 것은 value
+            ->value가 한글 또는 기호가 포함될때 utf-8 인코딩
+        -->
+    </body>
+</html>
