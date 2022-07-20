@@ -11,28 +11,32 @@
         form 태그 내에 입력요소 태그들을 포함시켜서 작성해야한다.
         작성완료된 입력을 서버로 전달한다.-->
         
+        <div style="width: 70%; margin: auto;max-width: 600px;">
+            <!--일반적인 목적으로 사용되는 블럭요소 : div, 인라인요소 : span -->
+        <h3>회원 가입</h3>
         <form action="">
-            <table>
+            <table style="width: 100%;">
+                <!-- 부모 요소인 div 크기 기준 100% -->
                 <!-- label 태그는 연관된 텍스트(for속성) 클릭하면 입력요소(id속성)가 포커스를 갖게 할수 있다. -->
                 <tr>
-                    <td><label for="lblname">이름</label></td>
+                    <td><label for="lblname" class="title mpt">이름</label></td>
                     <!-- 입력요소 태그에는 값을 식별하기 위한 속성name 값이 꼭 필요하다.-->
                     <td><input type="text" name="name" id="lblname"></td>
                 </tr>
                 <tr>
-                    <td><label for = "lblpass">패스워드</label></td>
+                    <td><label for = "lblpass" class="title mpt">패스워드</label></td>
                     <td><input type="password" name="password" id="lblpass"></td>
                 </tr>
                 <tr>
-                    <td>이메일</td>
+                    <td><label for = "lblemail" class="title mpt">이메일</label></td>
                     <td><input type="email" name="email"></td>
                 </tr>
                 <tr>
-                    <td>나이</td>
-                    <td><input type="number" name="age" value="19"></td>
+                    <td><label for = "lblage" class="title mpt">나이</label></td>
+                    <td><input type="number" name="age" value="19" min="15" max="99"></td>
                 </tr>
                 <tr>
-                    <td>지역(주소)</td>
+                    <td><label for = "lbladdr" class="title mpt">지역(주소)</label></td>
                     <td>
                         <!-- 콤보박스 : 입력+선택 -->
                         <!-- 선택상자 : only 선택 -->
@@ -48,19 +52,21 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>성별</td>
+                    <td><label for = "lblgender" class="title">성별</label></td>
                     <td>
                         <!-- 옵션(라디오) 버튼 : 여러 항목 중 하나 선택 -->
                         <input type="radio" name="gender" value="male" id="lblmale">
-                        <label for="lblmale">남성</label>
-                        <input type="radio" name="gender" value="female">여성
+                        <label for="lblmale" class="mpt">남성</label>
+                        <input type="radio" name="gender" value="female" id="lblfemale">
+                        <label for="lblfemale" class="mpt">여성</label>
                         <input type="radio" name="gender" 
-                            checked="checked" value="unknown">모름
+                            checked="checked" value="unknown" id="lblno">
+                            <label for ="lblno" class="mpt">모름</label>
 
                     </td>
                 </tr>
                 <tr>
-                    <td>취미</td>
+                    <td><label for = "lblhobby" class="title">취미</label></td></td>
                     <td>
                         <!-- 체크박스 : 다중선택. name 속성은 동일한 값 . 서버는 배열로 처리 -->
                         <input type="checkbox" name="hobby" value="축구">축구
@@ -72,16 +78,22 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input type="button" value="버튼">
+                        <!-- input 은 type 생략하면 text -->
                         <!-- submit 이 서버로 입력데이터를 전송(제출) -->
+                        <!-- button은 기본동작이 submt -->
+                        <!--  
+                        <input type="button" value="버튼">
                         <input type="submit" value="제출">
                         <input type="reset" value="초기화">
-                        <!-- button은 기본동작이 submt -->
-                        <button>제출2</button>
+                        -->
+                        <!-- button은 기본동작이 submit -->
+                        <button>가입하기</button>
+                        <button type="reset">다시쓰기</button>
                     </td>
                 </tr>
             </table>
         </form>
+    </div>
         <!-- 실행 URL 예시 :
             http://192.168.35.210:5500/day3/13form.html?name=%EA%B9%80%EB%95%A1%EB%95%A1&password=1234&email=test%40naver.com&age=22 
         
