@@ -1,0 +1,18 @@
+table {
+  border: 2px solid gray;
+  margin: auto;
+  width: 1100px;
+  text-align: center;
+}
+
+td {
+  border: 1px solid gray;
+}
+
+h3 {
+  text-align: center;
+}
+
+.title {
+  font-weight: bold;
+}
