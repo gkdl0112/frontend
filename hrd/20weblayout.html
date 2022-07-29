@@ -20,6 +20,7 @@
             <li><a href="javascript:link2()">회원목록조회</a></li>
             <li><a href="javascript:link3()">회원매출조회</a></li>
             <li style="margin-left: 40px;"><a href="javascript:home()">홈으로</a></li>
+            <li><a href="javascript:gallery()">갤러리</a></li>
         </ul>
     </nav>
     <main>
@@ -36,7 +37,7 @@
     <script>
         function link1(){ // 자바스크립트 함수 link1()
             //id 속성값이 'main'인 iframe 요소를 가져와서 src 속성값을 변경하기
-            document.getElementById('main').src = '/day3/14hrdForm.html';
+            document.getElementById('main').src = './inputForm.html';
         }
         function link2(){
             document.getElementById('main').src='/day3/15hrdtable.html';
@@ -46,6 +47,9 @@
         }
         function home(){
             document.getElementById('main').src='main.html';
+        }
+        function gallery(){
+            document.getElementById('main').src='gallery.html'
         }
 
     </script>

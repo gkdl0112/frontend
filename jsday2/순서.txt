@@ -1,0 +1,17 @@
+1. https://developers.kakao.com/
+2. 로그인
+3. 내 애플리케이션 -> 추가 -> 앱이름 : ooo , 사업자명 : ooo
+4. 앱설정 : 앱 선택 -> REST API 키 사용함.
+            Web 플랫폼 등록 -> http://127.0.0.1:5503
+5. REST API 레퍼런스
+https://developers.kakao.com/docs/latest/ko/reference/rest-api-reference 
+
+6. 웹문서 검색
+https://developers.kakao.com/tool/rest-api/open/get/v2-search-web
+
+7. REST API 테스트 도구
+https://chrome.google.com/webstore/category/extensions?hl=ko   에서 Talend 검색해서 크롬 확장프로그램 추가
+
+8. 테스트
+
+9. 자바스크립트 AJAX 통신으로 실행해보기

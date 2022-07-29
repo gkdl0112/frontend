@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsday5_DOM</title>
+    <style>
+        .item{
+            color: blueviolet;
+            font-weight: bold;
+        }
+        .item01{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h4>DOM</h4>
+        <ul>
+            <li>트와이스</li>
+            <li>에스파</li>
+            <li>비비즈</li>
+        </ul>
+        <ul>
+            <li>사나</li>
+            <li>다연</li>
+            <li>다현</li>
+            <li>정연</li>
+        </ul>
+    </div>
+    <script>
+        const main = document.getElementById('main') //document.querySelector('#main')
+        console.log(main)
+        console.log('1.childNodes')
+        console.log(main.childNodes)    //h4,ul,ul, 앞뒤에 있는 엔터는 text
+        console.log('2.children')
+        console.log(main.children)      //1번결과에서 text(엔터) 제외
+        console.log('3.첫번째 자식')
+        console.log(main.firstChild)
+        console.log('4.첫번째 자식 요소')
+        console.log(main.firstElementChild)
+        console.log('5.마지막 자식')
+        console.log(main.lastChild)
+        console.log('6.마지막자식요소')
+        console.log(main.lastElementChild)
+
+        const child1 = main.lastElementChild
+        console.log('7.마지막 자식의 컨텐츠')
+        console.log(child1.innerHTML)
+        console.log('8.첫번째 자식의 형제 요소')
+        console.log(main.firstElementChild.nextElementSibling.innerHTML)
+
+        const new_ul = document.createElement('ul') //마지막 자식요소 뒤에 추가
+        const list = '<li>newA</li><li>newB</li><li>newC</li><li>newD</li>'
+        new_ul.innerHTML = list;
+        main.appendChild(new_ul)
+        new_ul.className='item'
+        new_ul.classList.add('item01')
+        const old = main.children[1]
+        main.replaceChild(new_ul,old)
+        main.appendChild(old)
+    </script>
+</body>
+</html>

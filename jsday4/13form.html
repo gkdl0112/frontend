@@ -5,6 +5,7 @@
     <title>Document</title>
     <!-- href 속성값은 http url 또는 로컬 파일명 -->
     <link rel="stylesheet" href="13member.css">
+    <script src="14member.js"></script>
 </head>
 <body>
     <!-- 사용자 입력을 처리하는 form 작성 (form, 작성양식)
@@ -30,6 +31,7 @@
                 <tr>
                     <td><label for = "lblemail" class="title mpt">이메일</label></td>
                     <td><input type="email" name="email" id="lblemail"></td>
+                    <!-- type이 email 이면 @ 기호 필수 입력 button이 submit일때만 동작 -->
                 </tr>
                 <tr>
                     <td><label for = "lblage" class="title mpt">나이</label></td>
@@ -69,10 +71,10 @@
                     <td><label for = "lblhobby" class="title">취미</label></td></td>
                     <td>
                         <!-- 체크박스 : 다중선택. name 속성은 동일한 값 . 서버는 배열로 처리 -->
-                        <input type="checkbox" name="hobby" value="축구">축구
-                        <input type="checkbox" name="hobby" value="농구">농구
-                        <input type="checkbox" name="hobby" value="달리기">달리기
-                        <input type="checkbox" name="hobby" value="수영">수영
+                        <input type="checkbox" name="hobby" value="축구" id="lblfoot">축구
+                        <input type="checkbox" name="hobby" value="농구" id="lblbase">농구
+                        <input type="checkbox" name="hobby" value="달리기" id="lblrun">달리기
+                        <input type="checkbox" name="hobby" value="수영" id="lblswim">수영
                     </td>
 
                 </tr>
@@ -87,7 +89,7 @@
                         <input type="reset" value="초기화">
                         -->
                         <!-- button은 기본동작이 submit -->
-                        <button>가입하기</button>
+                        <button onclick="valid_check()" type="button">가입하기</button>
                         <button type="reset">다시쓰기</button>
                     </td>
                 </tr>

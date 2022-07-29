@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsdate5_날짜지정하기</title>
+</head>
+<body>
+    <!-- 처리조건 : 숙박일수와 입실날짜를 선택하면 퇴실날짜 자동 출력(표시) -->
+    <form action="">
+        숙박일수 :
+        <!-- onchange는 select 선택값이 변경될때 처리할 이벤트핸들러를 설정.
+            daySelect()는 확인 또는 테스트로 ㅎ ㅘㄹ용 -->
+            <select name="days" id="" onchange="daySelect()">
+                <option value="0">선택</option>
+                <option value="1">1박</option>
+                <option value="2">2박</option>
+                <option value="3">3박</option>
+                <option value="4">4박</option>
+            </select><br>
+            <!-- 퇴실날짜 = 입실날짜 + 숙박일수 계산해서 표시하기
+                핵심이 되는 함수는 endOutput()-->
+                입실날짜 : <input type="date" name="start" onchange="endOutput()"><br>
+                퇴실날짜 : <input type="date" name="end" readonly><br>
+            </form>
+            <script src="17dateForm.js"></script>
+</body>
+</html>
